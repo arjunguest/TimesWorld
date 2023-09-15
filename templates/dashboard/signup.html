@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Signup</h1>
+      <p class="error_warning">{{ error_message }}</p>
+      <form method="post">
+      {% csrf_token %}
+        <div class="txt_field">
+          {{ form.name }}
+          <label>Name</label>
+        </div>
+          {{ form.name.errors }}
+        <div class="txt_field">
+          {{ form.email }}
+          <label>Email</label>
+        </div>
+        {{ form.email.errors }}
+        <div class="txt_field">
+          {{ form.role }}
+          <span></span>
+        </div>
+        {{ form.role.errors }}
+        <div class="txt_field">
+          {{ form.country }}
+          <span></span>
+          <label>Country</label>
+        </div>
+        {{ form.country.errors }}
+        <div class="txt_field">
+          {{ form.nationality }}
+          <span></span>
+          <label>Nationality</label>
+        </div>
+        {{ form.nationality.errors }}
+        <div class="txt_field">
+          {{ form.mobile }}
+          <span></span>
+          <label>Moblie</label>
+        </div>
+          {{ form.mobile.errors }}
+         <div class="txt_field">
+           {{ form.password }}
+          <span></span>
+          <label>Password</label>
+        </div>
+         {{ form.password.errors }}
+        <input type="submit" value="Login" />
+        <div class="signup_link">Already have an account? <a href="#">Login</a></div>
+      </form>
+    </div>
+  </body>
+</html>

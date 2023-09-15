@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="dashboard_center">
+        <h1>Welcome to Staff Dashboard</h1>
+         <div class = "dash_logout_sec">
+              <div class="logout_button">
+                  <a href="{% url 'dashboard:logout' %}">Logout</a>
+              </div>
+          </div>
+        <div class="dash_sec">
+          <div>
+                  Name :
+          </div>
+          <div>
+              {{ data.name }}
+          </div>
+        </div>
+        <div class="dash_sec">
+          <div>
+                  Email :
+          </div>
+          <div>
+              {{ data.email }}
+          </div>
+        </div>
+         <div class="dash_sec">
+          <div>
+                  Country :
+          </div>
+          <div>
+              {{ data.country }}
+          </div>
+        </div>
+        <div class="dash_sec">
+          <div>
+                  Nationality :
+          </div>
+          <div>
+              {{ data.nationality }}
+          </div>
+        </div>
+        <div class="dash_sec">
+          <div>
+                  Mobile :
+          </div>
+          <div>
+              {{ data.mobile }}
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
