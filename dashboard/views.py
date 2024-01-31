@@ -98,3 +98,5 @@ class DashboardView(View):
         except Exception as e:
             return render(request, 'dashboard/error.html', { 'error_message': str(e)})
 
+# sample
+
